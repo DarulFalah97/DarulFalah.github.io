@@ -1,0 +1,373 @@
+
+
+/* ====================navbar==================== */
+*
+
+
+header {
+    margin-top: 20px; 
+  
+  }
+  body
+{
+  background: #ffffff;
+}
+
+  nav {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 5%;
+    height: 50px;
+    background-color: #009b74;
+  }
+  nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+  }
+  nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    margin-top: -10px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav .links li {
+    list-style: none;
+  }
+  nav .links a {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 12px;
+    
+  }
+  nav .links a:hover
+  {
+    color: rgb(60, 255, 0);
+  }
+  #nav-toggle {
+    position: absolute; 
+    top: -60px;
+  }
+  nav .icon-burger {
+    display: none;
+    position: absolute; 
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+  }
+
+  @media screen and (max-width: 768px) {
+    nav .logo{
+      float: none;
+      width: auto;
+      justify-content: center;
+    }
+    nav .links{
+      float: none;
+      position: fixed;
+      z-index: 9;
+      left: 0;
+      right: 0;
+      top: 60px;
+      bottom: 100%;
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: rgba(0, 0, 0, .8);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: all .5s ease-in-out;
+    }
+    nav .links a{
+      font-size: 14px;
+    }
+    nav .icon-burger{
+      display: block;
+    }
+    nav :checked ~ .links {
+      bottom: 0;
+    }
+    nav :checked ~ .icon-burger .line:nth-child(1) {
+      transform: translateY(10px) rotate(225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(3) {
+      transform: translateY(-10px) rotate(-225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(2) {
+      opacity: 0;
+    }
+  }
+
+
+/* ==================akhir navbar================ */
+
+
+/* jumbotron */
+.jumbotron
+{
+  background-image: url(img/acara2.jpg);
+  background-size: cover;
+  height:400px;
+  width: 100%;
+  top: 0;
+  text-align: center;
+ position: relative;
+
+}
+
+.jumbotron::after
+{
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.541);
+  position: absolute;
+  bottom: 0;
+}
+.jumbotron h4
+{
+  color: #fff;
+  text-align: center;
+  margin-top: 70px ;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.jumbotron p
+{
+  color: #fff;
+  text-align: center;
+}
+.container h4, .container p
+{
+  position: relative;
+  z-index: 1;
+  
+}
+/* teks judul */
+
+h1
+{
+    margin-top: 30px;
+    font-family:viga;
+    color: rgb(15, 119, 160);
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.7);
+    font-size: 40px;
+}
+/* ================================ */
+.row2
+{
+background-color: rgb(255, 255, 255);
+border-radius: 12px;
+box-shadow: 0 3px 9px rgba(0, 0, 0, 0.603) ;
+margin-top: -90px;
+position: relative;
+z-index: 1;
+padding: 10px;
+
+}
+.col
+{
+  float: left;
+  width: auto;
+  padding:10px;
+  height: 100px;
+  padding-right: 25px;
+  margin-left: 1px;
+}
+.col img
+{
+  height: 80px;       
+  width: 80px;  
+  margin-top: -5px;
+  margin-right: 10px;
+
+}
+.col span
+{
+  font-size: 19px;
+  font-family: viga;
+  color: rgb(0, 0, 0);
+}
+.row2::after
+{
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+/* ================================= */
+
+/* gallery */
+
+.item:hover
+{
+    filter: brightness(80%);
+    
+}
+.gambar
+{
+    margin-bottom: 25px;
+    border-radius: 4px;
+    box-shadow:  0 3px 20px rgba(0,0,0,0.2);
+    padding: 12px;
+}
+.item span
+{
+    font-family: viga;
+    color: rgb(26, 26, 119);
+    margin-left: 100px;
+}
+.item .teks1
+{
+    font-family: viga;
+    color: rgb(26, 26, 119);
+    margin-left: 70px;
+}
+.item .teks2
+{
+    font-family: viga;
+    color: rgb(26, 26, 119);
+    margin-left: 75px;
+}
+.item .teks3
+{
+    font-family: viga;
+    color: rgb(26, 26, 119);
+    margin-left: 55px;
+}
+
+
+/* ================================================== */
+@media ( max-width: 500px){
+  .jumbotron
+  {
+    
+      height: 300px;
+    
+  }
+ 
+
+  .jumbotron h4
+{
+  color: #fff;
+  text-align: center;
+  margin-top: 70px ;
+  font-size: 26px;
+
+}
+.jumbotron p
+{
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+
+}
+.container h4, .container p
+{
+  position: relative;
+  z-index: 1;
+}
+.col{
+  width: 100%;
+  padding-left: 50px;
+}
+.row2
+    {
+   margin-top: -120px;
+    }
+    .col img
+    {
+      height: 90px;       
+      width: 90px;  
+      margin-top: -10px;
+      margin-right: 30px;  
+     margin-right: 30px; 
+    }
+    .col span
+    {
+      font-size: 19px;
+      font-family: viga;
+      color: darkgreen;
+    }
+    .item .teks1
+{
+    font-family: viga;
+    color: rgb(26, 26, 119);
+    margin-left: 120px;
+}
+.item .teks2
+{
+    font-family: viga;
+    color: rgb(26, 26, 119);
+    margin-left: 120px;
+}
+.item .teks3
+{
+    font-family: viga;
+    color: rgb(26, 26, 119);
+    margin-left: 80px;
+}
+
+  
+}
+/* ======================================================== */
+/* desktop version */
+@media (min-width: 992px) { 
+   
+ 
+              
+             
+                h1
+                {
+                    margin-top: 30px;
+                    font-family:fantasy;
+                    color: rgb(15, 160, 92);
+                    text-align: center;
+                    text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.7);
+                    font-size: 70px;
+                }
+                
+
+
+               
+
+ }
+ 
+
+
+
+
+
+
